@@ -1,0 +1,79 @@
+# Files git will ignore
+# This file is managed by Ansible Automation Platform Setup Bundle
+# Updated to exclude sensitive and unnecessary files
+
+# Sensitive Configuration Files - NEVER COMMIT THESE!
+inventory
+ansible_commands.txt
+
+# Log Files
+*.log
+setup.log*
+/var/log/
+
+# SSL Certificates and Keys - SECURITY RISK IF COMMITTED!
+*.cert
+*.key
+*.crt
+*.pem
+tower.cert*
+tower.key*
+
+# Passwords and Secrets - CRITICAL SECURITY!
+*password*
+*secret*
+SECRET_KEY
+
+# Backup Files
+*.backup
+*.bak
+*.orig
+
+# Bundle and Package Files (too large for git)
+bundle/
+*.tar.gz
+*.tgz
+
+# Collections (large files that can be downloaded)
+collections/
+ansible_collections/
+
+# Package Lists
+packages/
+*.txt
+
+# Images and Containers (very large files)
+images/
+*.img
+
+# Temporary Files
+*.tmp
+*.temp
+/tmp/
+cert-config.conf
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Any file containing credentials
+*creds*
+*credentials*
